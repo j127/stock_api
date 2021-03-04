@@ -8,7 +8,6 @@ const app = express();
 
 const PORT = 5000;
 const API_URL = process.env.API_URL;
-console.log("API_URL", API_URL);
 
 app.get("/", async (req, res) => {
     try {
