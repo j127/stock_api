@@ -8,11 +8,11 @@ const app = express();
 
 const PORT = 5000;
 const API_URL = process.env.API_URL;
+console.log("API_URL", API_URL);
 
 app.get("/", async (req, res) => {
-    const url = "";
     try {
-        const response = await axios.get(url);
+        const response = await axios.get(API_URL);
         const data = response.data;
         res.json(data);
     } catch (e) {
@@ -22,5 +22,5 @@ app.get("/", async (req, res) => {
 });
 
 app.listen(PORT, () =>
-    console.log("server is running at http://localhost:${PORT}")
+    console.log(`server is running on http://localhost:${PORT}`)
 );
